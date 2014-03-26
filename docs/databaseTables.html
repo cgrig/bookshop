@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Database tables</title>
+<link rel="stylesheet" type = "text/css"
+		href = "style.css"/>
+<style type="text/css">
+th, tr {
+	width: 50px;
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Database structure</h1>
+
+<h4>Claudia Grigore, February 2008</h4>
+
+<p>&nbsp; </p>
+
+<h2>Table 1. Users </h2>
+
+<table width="95%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>User ID</u> </th>
+    <th scope="col">Username</th>
+    <th scope="col">Name</th>
+    <th scope="col">Surname</th>
+    <th scope="col">Student number</th>
+    <th scope="col">e-mail address</th>
+    <th scope="col">admin</th>
+    <th scope="col">password derivate </th>
+    
+  </tr>
+  <tr>
+    <td>000001</td>
+    <td>cgrig</td>
+    <td>Claudia</td>
+    <td>Grigore</td>
+    <td>07266049</td>
+    <td>claudia.dan@gmail.com</td>
+    <td>false</td>
+    <td>ceva</td>
+    
+  </tr>
+
+  <tr>
+    <td>int</td>
+    <td>varchar(20)</td>
+    <td>varchar(25)</td>
+    <td>varchar(25)</td>
+    <td>varchar(8)</td>
+    <td>varchar(50)</td>
+    <td>boolean</td>
+    <td>varchar(10)</td>
+  </tr>
+</table>
+
+<p>Underlined fields are primary keys </p>
+<p>Fields with * are foreign keys</p>
+
+<h2>Table 2. Schools</h2>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>School id </u></th>
+    <th scope="col">School Name</th>
+  </tr>
+
+  <tr>
+    <td>0001</td>
+    <td>Computer Science and Informatics</td>
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>varchar(35)</td>
+  </tr>
+</table>
+
+<h2>Table 3. Courses</h2>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>Course code </u></th>
+    <th scope="col">Course Name</th>
+  </tr>
+
+  <tr>
+    <td>COMP30310</td>
+    <td>OOP</td>
+  </tr>
+  <tr>
+    <td>varchar(15)</td>
+    <td>varchar(35)</td>
+  </tr>
+</table>
+
+
+<h2>Table 4. Books </h2>
+
+
+<table width="95%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>ISBN</u></th> <!-- the newest ISBN -->
+    <th scope="col">alternative ISBN</th> <!-- older ISBN -->
+    <th scope="col">Title</th>
+    <th scope="col">Author</th>
+    <th scope="col">Publisher</th>
+    <th scope="col">Edition</th>
+    <th scope="col">Year</th>
+    <th scope="col">Price</th>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>varchar(25)</td>
+    <td>varchar(25)</td>
+    <td>varchar(35)</td>
+    <td>varchar(35)</td>
+    <td>varchar(35)</td>
+    <td>varchar(10)</td>
+    <td>int</td>
+    <td>double</td>
+  </tr>
+</table>
+
+<h2>Table 5. Credit Card Information</h2>
+
+<table width="95%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>Credit Card ID</u></th>
+    <th scope="col">Credit Card type</th>
+    <th scope="col">Credit Card Number</th>
+    <th scope="col">Cardholder Name</th>
+    <th scope="col">Expiration Date</th>
+  </tr>
+
+  <tr>
+    <td>000001</td>
+    <td>Master Card</td>
+    <td>1324232123567436</td>
+    <td>Radu Grigore</td>
+    <td>2007.05.31</td>
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>varchar(15)</td>
+    <td>varchar(35)</td>
+    <td>varchar(35)</td>
+    <td>date</td>
+  </tr>
+</table>
+
+<h2>Table 6. Delivery Address</h2>
+
+<table width="95%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>Address ID</u></th>
+    <th scope="col">Country</th>
+    <th scope="col">City</th>
+    <th scope="col">Street</th>
+    <th scope="col">Number</th>
+  </tr>
+
+  <tr>
+    <td>000001</td>
+    <td>Ireland</td>
+    <td>Bray</td>
+    <td>Woodbrook Lawn</td>
+    <td>23</td>
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>varchar(15)</td>
+    <td>varchar(35)</td>
+    <td>varchar(35)</td>
+    <td>int</td>
+  </tr>
+</table>
+
+
+
+<p>&nbsp; </p>
+
+<h3>Additional tables</h3>
+
+<h2>Table 7. Users to Schools</h2>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th  scope="col"><u>User ID*</u></th>
+    <th  scope="col"><u>School id*</u></th>
+    
+  </tr>
+  <tr>
+    <td>0001</td>
+    <td>0001</td>
+    
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>int</td>
+    
+  </tr>
+</table>
+
+<h2>Table 8. Users to Courses</h2>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>User ID*</u></th>
+    <th  scope="col"><u>Course code*</u></th>
+    <th scope="col">Type</th>
+    
+  </tr>
+  <tr>
+    <td>000001</td>
+    <td>COMP30310</td>
+    <td>student</td>
+  </tr>
+<tr>
+    <td>000002</td>
+    <td>COMP30310</td>
+    <td>lecturer</td>    
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>varchar(15)</td>
+    <td>varchar(15)</td>
+  </tr>
+</table>
+
+<h2>Table 9. Courses to Schools</h2>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th  scope="col"><u>Course code*</u></th>
+    <th scope="col"><u>School id*</u></th>
+  </tr>
+  <tr>
+    <td>COMP30310</td>
+    <td>000001</td>
+  </tr>
+  <tr>
+    <td>varchar(15)</td>
+    <td>int</td>
+    
+  </tr>
+</table>
+
+<h2>Table 10. Books to Courses </h2>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th scope="col"><u>Course code*</u></th>
+    <th scope="col"><u>ISBN*</u></th>
+    <th scope="col">Lecturer's Review</th>
+  </tr>
+
+  <tr>
+    <td>COMP30310</td>
+    <td>9781413304541</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>varchar(15)</td>
+    <td>varchar(15)</td>
+    <td>int</td>
+  </tr>
+</table>
+
+<h2>Table 11. Books to Users - Wish List</h2>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th  scope="col"><u>User ID*</u></th>
+    <th scope="col"><u>ISBN*</u></th>
+    
+  </tr>
+
+  <tr>
+    <td>000001</td>
+    <td>9781413304541</td>
+  </tr>
+  <tr>
+    <td>varchar(15)</td>
+    <td>varchar(15)</td>
+  </tr>
+</table>
+
+<h2>Table 12. Books to Users - Bought</h2>
+
+<table width="70%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th  scope="col"><u>User ID*</u></th>
+    <th scope="col"><u>ISBN*</u></th>
+    <th scope="col">Date of purchase</th>
+    <th scope="col">Delivered</th>
+  </tr>
+
+  <tr>
+    <td>000001</td>
+    <td>9781413304541</td>
+    <td>2008.02.27</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>varchar(15)</td>
+    <td>varchar(15)</td>
+    <td>date</td>
+    <td>boolean</td>
+  </tr>
+</table>
+
+<h2>Table 13. Users to Credit cards</h2>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th  scope="col"><u>User ID*</u></th>
+    <th  scope="col"><u>Credit Card ID*</u></th>
+    
+  </tr>
+  <tr>
+    <td>0001</td>
+    <td>000001</td>
+    
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>int</td>
+    
+  </tr>
+</table>
+
+<h2>Table 14. Users to Delivering Addresses</h2>
+
+<table width="50%" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <th  scope="col"><u>User ID*</u></th>
+    <th  scope="col"><u>Address ID*</u></th>
+    
+  </tr>
+  <tr>
+    <td>0001</td>
+    <td>000001</td>
+    
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>int</td>
+    
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+</body>
+</html>
+

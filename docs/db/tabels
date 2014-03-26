@@ -1,0 +1,13 @@
+create table Users (uid varchar(20), name varchar(25), surname varchar(25), student_number varchar(10), e_mail varchar(50), admin boolean, password varchar(10), primary key(uid) );
+create table Schools (sid int not null auto_increment, school_name varchar(75), primary key(sid));
+create table Courses (course_code varchar(15), course_name varchar(75), primary key(course_code));
+create table Books (isbn varchar(25), old_isbn varchar(25), title varchar(75) DEFAULT "unknown", author varchar(75) DEFAULT "unknown", publisher varchar(50) DEFAULT "unknown", edition varchar(10) DEFAULT "1", imageURL varchar(256) DEFAULT "../bookshop/missing.jpg",year int DEFAULT 2000, price double, primary key(isbn));
+create table CreditCard (ccid int not null auto_increment, card_type varchar(15), card_number varchar(35), cardholder_name varchar(50), exp_year int, exp_month int, primary key(ccid));
+create table DeliveryAddress (aid int not null auto_increment, country varchar(15), city varchar(35), street varchar(30), primary key(aid));
+create table UsersToCourses (uid varchar(20), course_code varchar(15), isProf boolean, primary key(uid, course_code));
+create table CoursesToSchools (course_code varchar(15), sid int, primary key(course_code, sid));
+create table BooksToCourses (course_code varchar(15), importance int DEFAULT 5, isbn varchar(15), description varchar(16384) DEFAULT "<p>none</p>", primary key(course_code, isbn));
+create table ShoppingCart (uid varchar(20), isbn varchar(15), primary key(uid, isbn));
+create table BoughtBooks (uid varchar(20), isbn varchar(15), purchase_date date, deliv boolean, primary key(uid, isbn));
+create table UsersToCards (uid varchar(20), ccid int, primary key(uid, ccid));
+create table UsersToAddresses (uid varchar(20), aid int, primary key(uid, aid));

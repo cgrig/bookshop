@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Registration</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="scripts.js">
+  </script>
+</head>
+<body>
+  <form action="dbaction" 
+        onsubmit="return validate_form(this)" method="post">
+    <input type="hidden" name="op" value="register"/>
+    <input type="hidden" name="orig" value="bookshop"/>
+    <table class="books">
+     <tr>
+        <td style="text-align: right"><label for="username">Username:</label></td>
+        <td><input type="text" name="username"/> </td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Password: </td>
+        <td><input type="password" name="password"/></td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Again: </td>
+        <td><input type="password" name="again"/></td>
+      </tr>
+      <tr>
+        <td style="text-align: right">First Name: </td>
+        <td><input type="text" name="firstName"/></td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Last Name: </td>
+        <td><input type="text" name="lastName"/></td>
+      </tr>
+      <tr>
+        <td style="text-align: right">e-mail: </td>
+        <td><input type="text" name="email"/></td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Student Number: </td>
+        <td><input type="text" name="snum"/></td>
+      </tr>
+    </table>
+    <input type="submit" name="register" value="register"/>
+  </form>
+</body>
+</html>

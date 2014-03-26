@@ -1,0 +1,59 @@
+html {
+  font-family: Helvetica, Verdana, sans-serif;
+  background: #DDDDFF;
+}
+
+.categ {
+  width:90%;
+  padding:5px;
+  background:#000033;
+  color:white;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  text-decoration:none;
+  font-family:monospace;
+  font-size:large;
+}
+
+a.categ:hover {
+  background:#330033;
+}
+
+.secTitle {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+
+table.books {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+table.books th {
+  background: #000033;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+}
+
+table.books td {
+  padding: 3px;
+}
+
+td.editLabel {
+  text-align: right;
+}
+
+table.simple {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}

@@ -1,0 +1,11 @@
+insert into Users values("cgrig","Claudia","Grigore","07266049","noemail@gmail.com",1,"clau");
+insert into UsersToAddresses VALUES("cgrig",1);
+insert into UsersToCards VALUES("cgrig",1);
+insert into DeliveryAddress VALUES(1, "Romania", "Bucuresti", "Stefan Dumitrescu");
+insert into CreditCard VALUES (1, "VISA", "1231234345453423", "Claudia Grigore", 2009, 12);
+
+insert into Users values("guest","John","Doe","00000000","noemail@gmail.com",0,"guest");
+insert into UsersToAddresses VALUES("guest",2);
+insert into UsersToCards VALUES("guest",2);
+insert into DeliveryAddress VALUES(2, "Ireland", "Bray", "23 Woodbrook Lawn");
+insert into CreditCard VALUES (2, "VISA", "1231231231231234", "Radu Grigore", 2009, 12);

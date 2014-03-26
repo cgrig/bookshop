@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Registration</title>
+     <link rel="stylesheet" type = "text/css"
+		href = "../style.css"/>
+          
+  </head>
+  <body>
+     <table class="centered" width="90%">
+        <tr>
+           <td class="red" colspan="2">
+              <h2>Students' Bookshop</h2>
+              
+           </td>
+        </tr>
+        <tr>
+           <td class="red" width="11%" valign="top">&nbsp;</td>
+           <td>
+              <table class="noSpace" rules="rows" width="100%">
+                 <tr class="green">
+                     <td>Schools<form> <input type="text" name="searchSchools" size="10"> </input><input type="submit" value="search"></input></form></td>  
+                     <td>Courses <form> <input type="text" name="searchCourses" size="10"> </input><input type="submit" value="search"></input></form></td>  
+                     <td>Books <form> <input type="text" name="searchBooks" size="10"> </input><input type="submit" value="search"></input></form></td>  
+                 </tr>
+                 <tr class="mare">
+                     <td colspan="3">
+                        <form action="http://csserver.ucd.ie/~cgrigore/servlet/RegistrationServlet"  method="get">
+                          <table class="reg">
+                           <tr>
+                             <td><label for="uname">username: </label></td>
+                             <td><input type="text" name="username" size="10" id="uname"> </input></td>
+                           </tr>
+                           <tr>
+                             <td><label for="pass">password: </label></td>
+                             <td><input type="password" name="password" size="10" id="pass"> </input></td>
+                           </tr>
+                           <tr>
+                             <td><label for="e_mail">e-mail: </label></td>
+                             <td><input type="text" name="e_mail" size="20" id="e_mail"> </input></td>
+                           </tr>
+                           <tr>
+                             <td><label for="fname">First name: </label></td>
+                             <td><input type="text" name="first_name" size="10" id="fname"> </input></td>
+                           </tr>
+                           <tr>
+                             <td><label for="lname">Last name: </label></td>
+                             <td><input type="text" name="last_name" size="10" id="lname"> </input></td>
+                           </tr>
+                           <tr>
+                             <td><label for="number">Student number: </label></td>
+                             <td><input type="text" name="student_number" size="10" id="number"> </input></td>
+                           </tr>
+                           <tr><td>&nbsp;</td></tr>
+                           <tr>
+                             <td></td>
+                             <td><input type="submit" value="Register"> </input></td>
+                           </tr>
+                          </table>
+                        </form>
+                     </td>
+                 </tr>
+              </table>
+           </td>
+        </tr>
+      </table>
+      <p class="rig">February 2008, Claudia Grigore</p>
+  </body>
+</html>
